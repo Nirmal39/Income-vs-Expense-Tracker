@@ -25,7 +25,9 @@ app.use(cookieParser());
 
 
 app.use(cors({
-  exposedHeaders: ['X-Total-Count'],
+  origin: [process.env.FRONTEND_URL],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }))
 
 app.use('/api/v1',indexRouter);
