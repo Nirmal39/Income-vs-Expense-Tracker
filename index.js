@@ -25,6 +25,7 @@ app.use(cookieParser());
 
 
 app.use(cors({
+    origin : "*",
   exposedHeaders: ['X-Total-Count'],
 }))
 
