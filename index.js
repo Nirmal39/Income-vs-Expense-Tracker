@@ -25,6 +25,8 @@ app.use(cookieParser());
 
 
 app.use(cors({
+  origin : "https://income-vs-expense-tracker.vercel.app",
+  credentials: true,
   exposedHeaders: ['X-Total-Count'],
 }))
 
